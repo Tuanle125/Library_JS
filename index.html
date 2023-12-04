@@ -22,7 +22,7 @@
                 <div class="card1 flx1">
                     <div class="card-title">
                         <div class="txt1">Books</div>
-                        <button class="add-btn"><img class="icon" src="./img/add-button.svg" alt=""></button>
+                        <button class="add-btn" id="add-book-dialog"><img class="icon" src="./img/add-button.svg" alt=""></button>
                     </div>
                 </div>
                 <div class="card1 flx1">
@@ -37,13 +37,13 @@
                 <div class="card-list ">
                     <div class="card2">
                         <img class="img-book" src="./img/books/7 Habits.jpg" alt="">
-                        <div class="txt2 truncate1">7 Habits</div>
-                        <div class="description truncate2">The 7 Habits by Stephen Covey provide a framework for effectiveness and success through habits like taking initiative instead of reacting, envisioning your goals and purpose, prioritizing important tasks, fostering cooperation over competition, understanding others' viewpoints before being understood, leveraging diversity through synergizing talents, and consistently renewing and developing yourself through learning. These interconnected habits cultivate a proactive mindset and continuous self-improvement.</div>
+                        <div class="title truncate1">7 Habits</div>
+                        <div class="author truncate2">Stephen Covey</div>
                     </div>
                     <div class="card2">
                         <img class="img-book" src="./img/books/How To Win Friend & Influence People.jpg" alt="">
-                        <div class="txt2 truncate1">how to win friends and influence people</div>
-                        <div class="description truncate2">Dale Carnegie's timeless bestseller offers principles for building strong relationships and gaining influence over others. He advocates becoming genuinely interested in other people rather than talking mostly about yourself. His teachings include remembering names, smiling, paying sincere compliments, and showing sincere appreciation. Carnegie encourages focusing on others' interests and making them feel important. He stresses avoiding criticism and arguments, which breed ill will. Instead, one should emphasize understanding different viewpoints. Overall, the book provides practical tips for improving social skills, being a good conversationalist, and positively influencing people through kindness, empathy and making them feel valued.</div>
+                        <div class="title truncate1">how to win friends and influence people</div>
+                        <div class="author truncate2">Dale Carnegie</div>
                     </div>
                 </div>
             </div>
@@ -53,5 +53,25 @@
             <a href="https://github.com/Tuanle125/Library_JS">Copyright © 2023 Tuanle125</a>
         </footer>
     </div> 
+
+    <dialog class="dialog-book">
+        <form action=">
+            <div>
+                <label for="title">Title</label> 
+                <input id="title" type="text" name="title">
+            </div>
+            <div>
+                <label for="author">Author</label> 
+                <input id="author" type="text" name="author">
+            </div>
+            <div>
+                <label for="img-link">Image Link</label> 
+                <input id="img-link" type="text" name="img-link">
+            </div>
+
+            <input id="add-book" type="submit" value="Add">
+            <input type="submit" formmethod="dialog" value="Cancel">
+        </form>
+    </dialog>
 </body>
 </html>
