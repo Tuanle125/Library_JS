@@ -19,7 +19,23 @@ body {
     color: white;
     font-size: 30px;
 }
-
+.txt2 {
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+}
+.description {
+    color: rgb(239, 239, 239);
+    font-size: 25px;
+}
+.truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* number of lines to show */
+            line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
 .card1 {
     background-color: rgb(16,16,16);
     border-radius: 16px;
