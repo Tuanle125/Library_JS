@@ -20,6 +20,7 @@
 .author {
     color: rgb(239, 239, 239);
     font-size: 20px;
+    text-transform: capitalize;
 }
 
 
