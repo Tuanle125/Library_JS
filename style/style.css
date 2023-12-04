@@ -2,13 +2,7 @@ body {
     margin: 0;
     font-family: 'Saira Extra Condensed', sans-serif;
 }
-.img-book {
-    margin: auto;
-    width: 300px;
-    height: 400px;
-    box-shadow: rgba(0, 0, 0, 0.9) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-    margin-bottom: 10px;
-}
+
 
 .flx1 {
     flex : 1;
@@ -17,56 +11,7 @@ body {
     width: 45px;
     height: 45px;
 }
-.txt1 {
-    color: white;
-    font-size: 30px;
-}
-.txt2 {
-    color: white;
-    font-size: 30px;
-    font-weight: bold;
-    text-transform: capitalize;
-}
-.description {
-    color: rgb(239, 239, 239);
-    font-size: 25px;
-}
-.truncate1 {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 1; /* number of lines to show */
-            line-clamp: 1;
-    -webkit-box-orient: vertical;
-}
-.truncate3 {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 3; /* number of lines to show */
-            line-clamp: 3;
-    -webkit-box-orient: vertical;
-}
-.card1 {
-    background-color: rgb(16,16,16);
-    border-radius: 16px;
-    margin: 10px;
-    padding: 20px;
-}
-.card2 {
-    flex-basis: 400px;
-    background-color: rgb(24,24,24);
-    border-radius: 16px;
-    margin: 10px;
-    padding: 20px;
-}
-.card2:hover {
-    background-color: rgb(67, 67, 67);
-}
-.card-title {
-    display: flex;
-    justify-content: space-between;
-}
+
 
 .container {
     background-color: black;
