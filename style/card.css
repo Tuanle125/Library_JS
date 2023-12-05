@@ -4,7 +4,7 @@
     width: 150px;
     height: 200px;
     box-shadow: rgba(0, 0, 0, 0.5) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-    margin: 0px 0px 15px 20px;
+    margin-bottom: 15px;
 }
 
 .txt1 {
@@ -13,13 +13,13 @@
 }
 .title {
     color: white;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: bold;
     text-transform: capitalize;
 }
 .author {
     color: rgb(239, 239, 239);
-    font-size: 20px;
+    font-size: 18px;
     text-transform: capitalize;
 }
 
@@ -57,7 +57,8 @@
     padding: 20px;
 }
 .card2 {
-    flex-basis: 200px;
+    box-sizing: border-box;
+    flex-basis: 190px;
     background-color: rgb(24,24,24);
     border-radius: 16px;
     margin: 10px;
