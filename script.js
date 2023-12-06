@@ -25,6 +25,16 @@ document.addEventListener("DOMContentLoaded", () => {
         e.preventDefault();
     });
 
+    const formbookDetail = document.querySelector("#dialog-book-detail");
+    const btn_saveBook = document.querySelector("#save-book");
+    btn_saveBook.addEventListener("click", (e) => {
+        const id = e.target.value; 
+        library[id].isRead = document.querySelector("#is-read-detail").checked;
+        loadLibrary();
+        formbookDetail.close();
+        e.preventDefault();
+    });
+
     loadLibrary();
 });
 
@@ -88,6 +98,8 @@ function addEventOpenDetail(id){
     const card = document.querySelector(".book"+id);
     card.addEventListener("click", () => {
         bookDetailDialog.showModal();
+        document.querySelector("#is-read-detail").checked = library[id].isRead;
+        document.querySelector("#save-book").value = id;
     });
 }
 
