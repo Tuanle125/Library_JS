@@ -3,7 +3,10 @@ body {
     font-family: 'Saira Extra Condensed', sans-serif;
 }
 
-
+.untouchable {
+    user-select: none;
+    pointer-events: none;
+}
 .flx1 {
     flex : 1;
 }
@@ -54,6 +57,7 @@ body {
 .card-list {
     display: flex;
     flex-wrap: wrap;
+    gap: 18px;
 }
 
 
