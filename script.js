@@ -27,6 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const formbookDetail = document.querySelector("#dialog-book-detail");
     const btn_saveBook = document.querySelector("#save-book");
+    const btn_delBook = document.querySelector("#del-book");
     btn_saveBook.addEventListener("click", (e) => {
         const id = e.target.value; 
         library[id].isRead = document.querySelector("#is-read-detail").checked;
@@ -34,7 +35,13 @@ document.addEventListener("DOMContentLoaded", () => {
         formbookDetail.close();
         e.preventDefault();
     });
-
+    btn_delBook.addEventListener("click", (e) => {
+        const id = e.target.value; 
+        library.splice(id, 1);
+        loadLibrary();
+        formbookDetail.close();
+        e.preventDefault();
+    });
     loadLibrary();
 });
 
