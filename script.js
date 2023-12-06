@@ -80,7 +80,7 @@ function createBookCard(book, id){
     
     card.classList.add("card2", "book"+id);
     title.classList.add("title", "truncate1");
-    author.classList.add("author", "truncate2");
+    author.classList.add("author", "truncate1");
     img.classList.add("img-book");
     subContainer.classList.add("author-readed");
 
@@ -112,5 +112,7 @@ function addEventOpenDetail(id){
 
 const HTWFAFP = new Book("how to win friends and influence people", "Dale Carnegie", "./img/books/How To Win Friend & Influence People.jpg", true)
 const SH = new Book("7 Habits", "Stephen Covey", "./img/books/7 Habits.jpg");
+const TAOS = new Book("the art of stratergy", "Avinash Dixit, Barry Nalebuff", "https://nhasachphuongnam.com/images/detailed/244/Untitled-1_xu42-ig.jpg", false);
 library.push(SH);
 library.push(HTWFAFP);
+library.push(TAOS);
