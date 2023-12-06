@@ -3,7 +3,7 @@ const Check_Img_Path = "./img/icon/check.svg";
 const library = [];
 document.addEventListener("DOMContentLoaded", () => {
     const btn_addBookDialog = document.querySelector("#add-book-dialog");
-    const formBook = document.querySelector(".dialog-book");
+    const formBook = document.querySelector("#dialog-book-add");
     btn_addBookDialog.addEventListener("click", () => {
         formBook.showModal();
     });
@@ -19,11 +19,13 @@ document.addEventListener("DOMContentLoaded", () => {
             author.value, 
             imgLink.value ? imgLink.value : Empty_Img_Path,
             isRead.checked); console.log(isRead.checked);
-        library.push(book);
-        createBookCard(book);
+        addBook(book);
+        loadLibrary();
         formBook.close();
-        // e.preventDefault();
+        e.preventDefault();
     });
+
+    loadLibrary();
 });
 
 
@@ -35,31 +37,42 @@ function Book(title, author, imgPath, isRead) {
     this.isRead = isRead;
 }
 
-function addBookToLib(book) {
-    library.push(book);
+function loadLibrary(){
+    const cardList = document.querySelector(".card-list");
+    cardList.innerHTML = "";
+    console.log(library);
+    library.forEach((book, index) => {
+        createBookCard(book, index);
+        addEventOpenDetail(index);
+    });
 }
 
-function createBookCard(book){
+function addBook(book) {
+    library.push(book);
+    createBookCard(book, library.length);
+    addEventOpenDetail(library.length);
+}
+
+function createBookCard(book, id){
     const cardList = document.querySelector(".card-list");
     const card = document.createElement("div");
-    card.classList.add("card2");
-
     const title = document.createElement("div");
     const author = document.createElement("div");
     const img = document.createElement("img");
     const subContainer = document.createElement("div");
-
+    
+    card.classList.add("card2", "book"+id);
     title.classList.add("title", "truncate1");
     author.classList.add("author", "truncate2");
     img.classList.add("img-book");
     subContainer.classList.add("author-readed");
 
     img.src = book.imgPath;
-    
     title.innerHTML = book.title;
     author.innerHTML = book.author;
 
     subContainer.append(author);
+    //add checked icon if book's readed
     if(book.isRead){
         const readed = document.createElement("img");
         readed.classList.add("readed", "untouchable");
@@ -69,3 +82,16 @@ function createBookCard(book){
     card.append(img, title, subContainer);
     cardList.append(card);
 }
+
+function addEventOpenDetail(id){
+    const bookDetailDialog = document.querySelector("#dialog-book-detail");
+    const card = document.querySelector(".book"+id);
+    card.addEventListener("click", () => {
+        bookDetailDialog.showModal();
+    });
+}
+
+const HTWFAFP = new Book("how to win friends and influence people", "Dale Carnegie", "./img/books/How To Win Friend & Influence People.jpg", true)
+const SH = new Book("7 Habits", "Stephen Covey", "./img/books/7 Habits.jpg");
+library.push(SH);
+library.push(HTWFAFP);
