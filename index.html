@@ -17,7 +17,7 @@
         <section class="main">
             <div class="side-bar-container">
                 <div class="card1">
-                    <div class="txt1">Your Libraby</div>
+                    <div class="txt1">Your Library</div>
                 </div>
                 <div class="card1 flx1">
                     <div class="card-title">
@@ -34,24 +34,7 @@
             </div>
     
             <div class="card-container card1">
-                <div class="card-list ">
-                    <!-- <div class="card2">
-                        <img class="img-book" src="./img/books/7 Habits.jpg" alt="">
-                        <div class="title truncate1">7 Habits</div>
-                        <div class="author-readed">
-                            <div class="author truncate2">Stephen Covey</div>
-                        </div>
-                        
-                    </div>
-                    <div class="card2">
-                        <img class="img-book" src="./img/books/How To Win Friend & Influence People.jpg" alt="">
-                        <div class="title truncate1">how to win friends and influence people</div>
-                        <div class="author-readed">
-                            <div class="author truncate2">Dale Carnegie</div>
-                            <img class="readed untouchable" src="./img/icon/check.svg" alt="">
-                        </div> 
-                    </div> -->
-                </div>
+                <div class="card-list "></div>
             </div>
         </section>
 
@@ -85,24 +68,15 @@
 
     <dialog id="dialog-book-detail">
         <form action="">
-            <div>
-                <label for="title">Title: </label> 
-                <input id="title" type="text" name="title">
-            </div>
-            <div>
-                <label for="author">Author: </label> 
-                <input id="author" type="text" name="author">
-            </div>
-            <div>
-                <label for="img-link">Image Link: </label> 
-                <input id="img-link" type="text" name="img-link">
-            </div>
+            <input type="submit" formmethod="dialog" value="X">
             <div>
                 <label for="is-read">Is Read: </label>
                 <input id="is-read" type="checkbox" name="isRead">
             </div>
-            <input id="add-book" type="submit" value="Add">
-            <input type="submit" formmethod="dialog" value="Cancel">
+            <div>
+                <button id="delete-book" type="button">Delete</button>
+            </div>
+            <input id="save-book" type="submit" value="Save">
         </form>
     </dialog>
 </body>
