@@ -63,18 +63,21 @@
     <dialog class="dialog-book">
         <form action=">
             <div>
-                <label for="title">Title</label> 
+                <label for="title">Title: </label> 
                 <input id="title" type="text" name="title">
             </div>
             <div>
-                <label for="author">Author</label> 
+                <label for="author">Author: </label> 
                 <input id="author" type="text" name="author">
             </div>
             <div>
-                <label for="img-link">Image Link</label> 
+                <label for="img-link">Image Link: </label> 
                 <input id="img-link" type="text" name="img-link">
             </div>
-
+            <div>
+                <label for="is-read">Is Read: </label>
+                <input id="is-read" type="checkbox" name="isRead">
+            </div>
             <input id="add-book" type="submit" value="Add">
             <input type="submit" formmethod="dialog" value="Cancel">
         </form>
